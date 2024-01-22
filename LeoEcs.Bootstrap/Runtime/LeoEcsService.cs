@@ -71,7 +71,7 @@ namespace UniGame.LeoEcs.Bootstrap.Runtime
         
         public void SetDefaultWorld(EcsWorld world)
         {
-            LeoEcsConvertersData.World = world;
+            LeoEcsGlobalData.World = world;
         }
         
         public async UniTask InitializeAsync()

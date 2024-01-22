@@ -50,7 +50,7 @@ namespace UniGame.LeoEcs.Bootstrap.Runtime
 
         protected override async UniTask<ILeoEcsService> CreateServiceInternalAsync(IContext context)
         {
-            LeoEcsConvertersData.World = null;
+            LeoEcsGlobalData.World = null;
 
             var config = Instantiate(ecsConfiguration);
             _updateMapData = Instantiate(updatesMap);
