@@ -1,4 +1,4 @@
-    namespace UniGame.LeoEcs.Converter.Runtime
+namespace UniGame.LeoEcs.Converter.Runtime
 {
     using System;
     using System.Collections.Generic;
@@ -42,7 +42,7 @@
         [Space(8)]
         [InlineProperty]
         [SerializeReference]
-        public List<ILeoEcsMonoComponentConverter> serializableConverters = new List<ILeoEcsMonoComponentConverter>();
+        public List<IEcsComponentConverter> serializableConverters = new List<IEcsComponentConverter>();
 
         [Space(8)] 
         [Searchable(FilterOptions = SearchFilterOptions.ISearchFilterableInterface)] 
@@ -89,7 +89,7 @@
 
         public bool AutoCreate => createEntityOnEnabled || createEntityOnStart;
         
-        public IReadOnlyList<ILeoEcsComponentConverter> MonoConverters => UpdateMonoConverter();
+        public IReadOnlyList<IEcsComponentConverter> MonoConverters => UpdateMonoConverter();
 
         public IReadOnlyList<IEcsComponentConverter> ComponentConverters => assetConverters;
         
@@ -143,11 +143,11 @@
         
 #region private methods
 
-        private List<ILeoEcsComponentConverter> UpdateMonoConverter()
+        private List<IEcsComponentConverter> UpdateMonoConverter()
         {
             if(_converters.Count > 0) return _converters;
             
-            _converters ??= new List<ILeoEcsComponentConverter>();
+            _converters ??= new List<IEcsComponentConverter>();
             _converters.Clear();
             
             GetComponents(_converters);
@@ -245,7 +245,7 @@
         {
             _entityLifeTime ??= new LifeTime();
             //get all converters
-            _converters ??= new List<ILeoEcsComponentConverter>();
+            _converters ??= new List<IEcsComponentConverter>();
         }
 
 #endregion

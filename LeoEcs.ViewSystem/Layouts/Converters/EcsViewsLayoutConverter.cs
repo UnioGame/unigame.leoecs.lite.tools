@@ -25,9 +25,10 @@ namespace UniGame.LeoEcs.ViewSystem.Layouts.Converters
         [InlineProperty]
         public ViewLayoutAsset layoutAsset;
         
-        protected override void OnApply(GameObject target,
-            EcsWorld world, int entity,
-            CancellationToken cancellationToken = default)
+        protected override void OnApply(
+            GameObject target,
+            EcsWorld world, 
+            int entity)
         {
             var layoutId = layoutAsset.layoutId;
             var layoutFactory = layoutAsset.layout;
