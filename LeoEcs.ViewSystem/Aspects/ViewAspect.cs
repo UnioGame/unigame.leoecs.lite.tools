@@ -22,5 +22,9 @@ namespace UniGame.LeoEcs.ViewSystem.Aspects
         
         //events
         public EcsPool<ViewStatusSelfEvent> StatusChanged;
+        
+        //requests
+        public EcsPool<CreateLayoutViewRequest> CreateLayoutView;
+        public EcsPool<CloseViewSelfRequest> CloseView;
     }
 }

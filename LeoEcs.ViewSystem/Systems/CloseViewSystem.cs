@@ -2,6 +2,7 @@ namespace UniGame.LeoEcs.ViewSystem.Systems
 {
     using System;
     using Components;
+    using Extensions;
     using Leopotam.EcsLite;
     using Unity.IL2CPP.CompilerServices;
 
@@ -23,10 +24,10 @@ namespace UniGame.LeoEcs.ViewSystem.Systems
             _world = systems.GetWorld();
             
             _closeFilter = _world
-                .Filter<CloseViewRequest>()
+                .Filter<CloseViewSelfRequest>()
                 .Inc<ViewComponent>()
                 .End();
-
+            
             _viewComponent = _world.GetPool<ViewComponent>();
         }
         
