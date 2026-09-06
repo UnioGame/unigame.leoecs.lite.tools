@@ -15,7 +15,9 @@
   ],
   "dependencies": {
     "com.unity.addressables": "1.20.0",
-    "com.unigame.coremodules": "2023.0.3",
+    "com.unigame.unicore": "2025.0.24",
+    "com.unigame.rx": "2025.0.5",
+    "com.cysharp.unitask": "2.5.11",
     "com.unigame.viewsystem": "2023.0.4",
     "com.leopotam.ecslite": "https://github.com/UnioGame/ecslite.git",
     "com.leopotam.ecslite.extendedsystems": "https://github.com/UnioGame/ecslite-extendedsystems.git",
