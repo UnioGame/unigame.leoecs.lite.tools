@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.Debug.Editor
+namespace UniGame.LeoEcs.Debug.Editor
 {
     using System;
     using System.Buffers;
@@ -7,7 +7,8 @@
     using Leopotam.EcsLite;
     using Runtime.ObjectPool.Extensions;
     using UniModules.Editor;
-    using UniModules.UniCore.Runtime.ReflectionUtils;
+    using UniGame.Runtime.ReflectionUtils;
+    using UniModules.UniGame.Editor.DrawersTools;
     using UnityEngine;
 
 #if ODIN_INSPECTOR

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UniGame.ViewSystem.Runtime;
 
 namespace UniGame.LeoEcs.ViewSystem.Components

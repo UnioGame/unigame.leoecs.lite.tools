@@ -1,5 +1,6 @@
 namespace UniGame.LeoEcs.ViewSystem.Behavriour
 {
+    using global::UniModules.UniGame.UiSystem.Runtime;
     using Converter.Runtime;
     using Converter.Runtime.Abstract;
     using Core.Runtime;
@@ -7,9 +8,9 @@ namespace UniGame.LeoEcs.ViewSystem.Behavriour
     using Sirenix.OdinInspector;
     using Extensions;
     using UiSystem.Runtime.Settings;
-    using UniGame.Rx.Runtime.Extensions;
-    using UniModules.UniGame.Core.Runtime.DataFlow.Extensions;
-    using UniModules.UniGame.UiSystem.Runtime;
+    using UniGame.Runtime.Rx.Runtime.Extensions;
+    using UniGame.Core.Runtime;
+    using UniGame.UiSystem.Runtime;
     using UnityEngine;
     using UnityEngine.UI;
 

@@ -1,7 +1,7 @@
-﻿namespace UniGame.LeoEcs.Bootstrap.Runtime
+namespace UniGame.LeoEcs.Bootstrap.Runtime
 {
     using UniGame.Core.Runtime;
-    using UniGame.UniNodes.GameFlow.Runtime;
+    using UniGame.GameFlow.Runtime;
     using System.Collections.Generic;
     using System.Diagnostics;
     using Abstract;
@@ -13,7 +13,7 @@
     using Leopotam.EcsLite;
     using PostInitialize;
     using UniCore.Runtime.ProfilerTools;
-    using UniModules.UniCore.Runtime.DataFlow;
+    using UniGame.Runtime.DataFlow;
     using Object = UnityEngine.Object;
 
     public class LeoEcsService : GameService,ILeoEcsService
@@ -74,7 +74,7 @@
             LeoEcsGlobalData.World = world;
         }
         
-        public override async UniTask InitializeAsync()
+        public async UniTask InitializeAsync()
         {
 #if GAME_DEBUG
             var stopwatch = Stopwatch.StartNew();
@@ -249,7 +249,7 @@
             
             if (feature is ILeoEcsInitializableFeature initializeFeature)
             {
-                var featureLifeTime = new LifeTimeDefinition();
+                var featureLifeTime = new LifeTime();
                     
                 await initializeFeature
                     .InitializeFeatureAsync(ecsSystems)
@@ -276,7 +276,7 @@
                     leoEcsSystem = systemAsset as IEcsSystem;
                 }
                 
-                var featureLifeTime = new LifeTimeDefinition();
+                var featureLifeTime = new LifeTime();
                 if (leoEcsSystem is ILeoEcsInitializableFeature initFeature)
                 {
 #if GAME_DEBUG
@@ -290,7 +290,7 @@
                     LogServiceTime($"\tSUB FEATURE {feature.GetType().Name}", timer);
 #endif
                     
-                    featureLifeTime.Release();
+                    featureLifeTime.Terminate();
                 }
 
                 ecsSystems.Add(leoEcsSystem);

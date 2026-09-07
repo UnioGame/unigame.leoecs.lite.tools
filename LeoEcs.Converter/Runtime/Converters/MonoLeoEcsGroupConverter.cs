@@ -15,7 +15,6 @@
 #if TRI_INSPECTOR
     using TriInspector;
 #endif
-    
     public class MonoLeoEcsGroupConverter : MonoLeoEcsConverter<EcsComponentsGroupConverter>
     {
     }

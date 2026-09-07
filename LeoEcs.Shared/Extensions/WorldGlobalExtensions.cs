@@ -4,9 +4,8 @@
     using System.Collections.Generic;
     using System.Runtime.CompilerServices;
     using Leopotam.EcsLite;
-    using UniModules.UniCore.Runtime.Extension;
-    using UniModules.UniCore.Runtime.Utils;
-    using UniModules.UniGame.Context.Runtime.Context;
+    using UniGame.Runtime.Utils;
+    using UniGame.Context.Runtime;
 
     public static class WorldGlobalExtensions
     {

@@ -1,5 +1,6 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Behavriour
+namespace UniGame.LeoEcs.ViewSystem.Behavriour
 {
+    using global::UniModules.UniGame.UiSystem.Runtime;
     using System;
     using Converters;
     using Core.Runtime.SerializableType;
@@ -7,7 +8,7 @@
     using Extensions;
     using Leopotam.EcsLite;
     using Sirenix.OdinInspector;
-    using UniModules.UniGame.UiSystem.Runtime;
+    using UniGame.UiSystem.Runtime;
     using UnityEngine;
 
     [Serializable]

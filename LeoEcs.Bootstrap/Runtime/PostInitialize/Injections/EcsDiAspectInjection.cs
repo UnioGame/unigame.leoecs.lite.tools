@@ -1,11 +1,11 @@
-﻿namespace UniGame.LeoEcs.Bootstrap.Runtime.PostInitialize
+namespace UniGame.LeoEcs.Bootstrap.Runtime.PostInitialize
 {
     using System;
     using System.Collections.Generic;
     using System.Reflection;
     using Leopotam.EcsLite;
-    using UniModules.UniCore.Runtime.ReflectionUtils;
-    using UniModules.UniCore.Runtime.Utils;
+    using UniGame.Runtime.ReflectionUtils;
+    using UniGame.Runtime.Utils;
 
     [Serializable]
     public class EcsDiAspectInjection : IEcsDiInjection

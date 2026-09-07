@@ -27,14 +27,14 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [
-        "LEO_ECS_ENABLE",
+        "LEO_ECS_ENABLED",
         "ODIN_INSPECTOR"
     ],
     "versionDefines": [
         {
             "name": "com.leopotam.ecslite",
-            "expression": "",
-            "define": "LEO_ECS_ENABLE"
+            "expression": "[2023.0.0,2025.0.0)",
+            "define": "LEO_ECS_ENABLED"
         }
     ],
     "noEngineReferences": false

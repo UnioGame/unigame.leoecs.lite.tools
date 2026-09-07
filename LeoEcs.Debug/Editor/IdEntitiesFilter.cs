@@ -1,7 +1,7 @@
-﻿namespace UniGame.LeoEcs.Debug.Editor
+namespace UniGame.LeoEcs.Debug.Editor
 {
     using System;
-    using UniModules.UniCore.Runtime.Utils;
+    using UniGame.Runtime.Utils;
 
     [Serializable]
     public class IdEntitiesFilter : IEcsWorldSearchFilter

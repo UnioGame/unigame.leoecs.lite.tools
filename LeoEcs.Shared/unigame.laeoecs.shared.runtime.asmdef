@@ -6,7 +6,7 @@
         "GUID:e06a58708b83247ca9dc984644f5b40b",
         "GUID:a758ff47af0484038b71625d05877e22",
         "GUID:a22362b82293644e1bbe51356c008d63",
-        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:2ed7c5348d9801a40a9fd7480dd6b981",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:84651a3751eca9349aac36a66bba901b",
         "GUID:8e4577c9194c10845984cf27eb974fd1",
@@ -32,7 +32,7 @@
     "versionDefines": [
         {
             "name": "com.leopotam.ecslite",
-            "expression": "2023.0.0",
+            "expression": "[2023.0.0,2025.0.0)",
             "define": "LEO_ECS_ENABLED"
         }
     ],

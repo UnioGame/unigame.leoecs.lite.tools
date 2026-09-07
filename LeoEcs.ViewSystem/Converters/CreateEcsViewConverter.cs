@@ -8,11 +8,12 @@ using UniGame.LeoEcs.Converter.Runtime;
 using UniGame.LeoEcs.Shared.Extensions;
 using UniGame.LeoEcs.ViewSystem.Components;
 using UniGame.LeoEcs.ViewSystem.Extensions;
-using UniModules.UniGame.UiSystem.Runtime;
+using UniGame.UiSystem.Runtime;
 using UnityEngine;
 
 namespace UniGame.LeoEcs.ViewSystem.Converters
 {
+    using global::UniModules.UniGame.UiSystem.Runtime;
     [Serializable]
     public class CreateEcsViewConverter : LeoEcsConverter
     {

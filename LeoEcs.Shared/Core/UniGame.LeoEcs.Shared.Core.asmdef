@@ -30,7 +30,7 @@
     "versionDefines": [
         {
             "name": "com.leopotam.ecslite",
-            "expression": "2023.0.0",
+            "expression": "[2023.0.0,2025.0.0)",
             "define": "LEO_ECS_ENABLED"
         }
     ],

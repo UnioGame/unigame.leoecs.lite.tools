@@ -1,9 +1,9 @@
-﻿namespace UniGame.LeoEcs.Converter.Runtime
+namespace UniGame.LeoEcs.Converter.Runtime
 {
     using System;
     using Abstract;
     using Leopotam.EcsLite;
-    using UniModules.UniCore.Runtime.ReflectionUtils;
+    using UniGame.Runtime.ReflectionUtils;
     using UnityEngine;
 
 #if ODIN_INSPECTOR

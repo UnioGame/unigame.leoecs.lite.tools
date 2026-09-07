@@ -3,13 +3,16 @@ using Leopotam.EcsLite;
 using UniGame.LeoEcs.Shared.Extensions;
 using UniGame.LeoEcs.ViewSystem.Components;
 using UniModules.UniGame.UiSystem.Runtime;
+using UniGame.LeoEcs.ViewSystem.Converters;
+using UniGame.UiSystem.Runtime;
 using UnityEngine;
 
 namespace UniGame.LeoEcs.ViewSystem.Extensions
 {
+    using global::UniModules.UniGame.UiSystem.Runtime;
     using System.Runtime.CompilerServices;
     using UniGame.ViewSystem.Runtime;
-    using UniModules.UniCore.Runtime.Utils;
+    using UniGame.Runtime.Utils;
 
     public static class EcsViewExtensions
     {

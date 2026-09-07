@@ -8,7 +8,7 @@ namespace UniGame.LeoEcs.Converter.Runtime
     using Cysharp.Threading.Tasks;
     using Editor;
     using Leopotam.EcsLite;
-    using UniModules.UniCore.Runtime.DataFlow;
+    using UniGame.Runtime.DataFlow;
     using UnityEngine;
     using UnityEngine.Serialization;
 
@@ -96,7 +96,7 @@ namespace UniGame.LeoEcs.Converter.Runtime
         private EcsPackedEntity _packedEntity;
         private EcsWorld _world;
         private List<IEcsComponentConverter> _converters = new List<IEcsComponentConverter>();
-        private LifeTimeDefinition _entityLifeTime = new LifeTimeDefinition();
+        private LifeTime _entityLifeTime = new LifeTime();
         private int _generation;
         
 #endregion
@@ -191,7 +191,7 @@ namespace UniGame.LeoEcs.Converter.Runtime
             if (_state != EntityState.Destroyed) return;
 
             _state = EntityState.Creating;
-            _entityLifeTime.Release();
+            _entityLifeTime.Restart();
 
             Convert()
                 .AttachExternalCancellation(_entityLifeTime.Token)
@@ -240,7 +240,7 @@ namespace UniGame.LeoEcs.Converter.Runtime
             entity = -1;
             _state = EntityState.Destroyed;
             _packedEntity = default;
-            _entityLifeTime.Release();
+            _entityLifeTime.Terminate();
         }
 
 #endregion
@@ -276,7 +276,7 @@ namespace UniGame.LeoEcs.Converter.Runtime
 
         private void Awake()
         {
-            _entityLifeTime ??= new LifeTimeDefinition();
+            _entityLifeTime ??= new LifeTime();
             //get all converters
             _converters ??= new List<IEcsComponentConverter>();
         }

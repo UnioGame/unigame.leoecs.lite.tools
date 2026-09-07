@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcsLite.LeoEcs.ViewSystem.Systems
+namespace UniGame.LeoEcsLite.LeoEcs.ViewSystem.Systems
 {
     using System;
     using Game.Modules.UnioModules.UniGame.LeoEcsLite.LeoEcs.ViewSystem.Components;

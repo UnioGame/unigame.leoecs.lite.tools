@@ -6,8 +6,8 @@ namespace UniGame.LeoEcs.Shared.Extensions
     using Core.Runtime;
     using Cysharp.Threading.Tasks;
     using Leopotam.EcsLite;
-    using UniModules.UniCore.Runtime.DataFlow;
-    using UniModules.UniCore.Runtime.Utils;
+    using UniGame.Runtime.DataFlow;
+    using UniGame.Runtime.Utils;
     using Unity.Collections;
     using UnityEngine;
 
@@ -23,19 +23,19 @@ namespace UniGame.LeoEcs.Shared.Extensions
         private static MemorizeItem<EcsWorld,WorldContextData> _memorizeItem = MemorizeTool
             .Memorize<EcsWorld, WorldContextData>(static x =>
             {
-                var lifeTime = new LifeTimeDefinition();
-                var worldData = new WorldContextData()
+                var lifeTime = new LifeTime();
+                var worldData = new WorldContextData
                 {
                     World = x,
                     LifeTime = lifeTime,
                     SingleEntities = new NativeHashMap<int, EcsPackedEntity>(8, Allocator.Persistent)
                         .AddTo(lifeTime)
                 };
-                
+
                 UpdateWorldLifeTime(x,lifeTime).Forget();
                 return worldData;
                 
-                static async UniTask UpdateWorldLifeTime(EcsWorld world,LifeTimeDefinition lifeTime)
+                static async UniTask UpdateWorldLifeTime(EcsWorld world,LifeTime lifeTime)
                 {
                     while (world.IsAlive())
                     {
@@ -468,7 +468,7 @@ namespace UniGame.LeoEcs.Shared.Extensions
     public class WorldContextData
     {
         public EcsWorld World;
-        public LifeTimeDefinition LifeTime;
+        public LifeTime LifeTime;
         public NativeHashMap<int,EcsPackedEntity> SingleEntities;
     }
 }

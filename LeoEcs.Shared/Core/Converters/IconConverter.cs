@@ -1,4 +1,4 @@
-﻿namespace Game.Ecs.Core.Converters
+namespace Game.Ecs.Core.Converters
 {
     using System;
     using System.Threading;
@@ -8,7 +8,7 @@
     using UniGame.AddressableTools.Runtime;
     using UniGame.LeoEcs.Converter.Runtime;
     using UniGame.LeoEcs.Shared.Extensions;
-    using UniModules.UniGame.Core.Runtime.DataFlow.Extensions;
+    using UniGame.Core.Runtime;
     using UnityEngine;
     using UnityEngine.AddressableAssets;
 

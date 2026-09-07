@@ -1,26 +1,26 @@
 using Leopotam.EcsLite;
 using UniGame.Core.Runtime;
-using UniModules.UniCore.Runtime.DataFlow;
+using UniGame.Runtime.DataFlow;
 using UnityEngine;
 
 namespace UniGame.LeoEcs.Shared.Systems
 {
     public class LifeTimeEcsSystem : IEcsInitSystem,IEcsDestroySystem,ILifeTimeContext
     {
-        private LifeTimeDefinition _lifeTime = new LifeTimeDefinition();
+        private LifeTime _lifeTime = new LifeTime();
 
         public ILifeTime LifeTime => _lifeTime;
         
         public void Init(IEcsSystems systems)
         {
-            _lifeTime.Release();
+            _lifeTime.Restart();
             OnInit(systems,_lifeTime);
         }
 
         public void Destroy(IEcsSystems systems)
         {
             OnDestroy(systems);
-            _lifeTime.Release();
+            _lifeTime.Terminate();
         }
 
         protected virtual void OnInit(IEcsSystems systems, ILifeTime lifeTime)

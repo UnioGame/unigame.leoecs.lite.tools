@@ -1,12 +1,13 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Extensions
+namespace UniGame.LeoEcs.ViewSystem.Extensions
 {
+    using global::UniModules.UniGame.UiSystem.Runtime;
     using Components;
     using Game.Ecs.UI.EndGameScreens.Systems;
     using LeoEcsLite.LeoEcs.ViewSystem.Systems;
     using Leopotam.EcsLite;
     using UniGame.ViewSystem.Runtime;
-    using UniModules.UniCore.Runtime.Utils;
-    using UniModules.UniGame.UiSystem.Runtime;
+    using UniGame.Runtime.Utils;
+    using UniGame.UiSystem.Runtime;
 
     public static class EcsViewSystemExtensions
     {

@@ -54,7 +54,6 @@
                     : GameTime.Time - stateComponent.LastTime;
                 
                 remainsTimeComponent.Value = cooldown - timePassed;
-
                 if (timePassed < cooldown) continue;
                 
                 _timerAspect.Active.Del(entity);

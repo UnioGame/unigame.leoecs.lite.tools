@@ -1,9 +1,10 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Systems
+namespace UniGame.LeoEcs.ViewSystem.Systems
 {
     using System;
     using Components;
+    using global::UniGame.ViewSystem.Runtime;
     using global::UniGame.LeoEcs.Bootstrap.Runtime.Attributes;
-    using global::UniModules.UniGame.UISystem.Runtime;
+    using global::UniGame.UiSystem.Runtime;
     using Leopotam.EcsLite;
 
     /// <summary>
@@ -43,7 +44,7 @@
                     continue;
                 
                 var view = lifeTimeComponent.View;
-                if(!view.IsTerminated && view.Status.Value != ViewStatus.Closed)
+                if(!view.IsTerminated && view.Status.CurrentValue != ViewStatus.Closed)
                     view.Close();
     
                 if(_lifeTimePool.Has(entity))

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace UniGame.LeoEcs.Converter.Runtime
@@ -7,7 +7,7 @@ namespace UniGame.LeoEcs.Converter.Runtime
     using System.Threading;
     using Leopotam.EcsLite;
     using Abstract;
-    using UniModules.UniCore.Runtime.Utils;
+    using UniGame.Runtime.Utils;
     using UnityEngine;
 
 #if TRI_INSPECTOR

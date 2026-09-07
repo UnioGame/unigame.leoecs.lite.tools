@@ -44,13 +44,11 @@
             {
                 ref var cooldownComponent = ref _timerAspect.Cooldown.Get(entity);
                 ref var stateComponent = ref _timerAspect.State.GetOrAddComponent(entity);
-
                 var unscaleTime = cooldownComponent.UnscaleTime;
                 
                 stateComponent.LastTime = unscaleTime
                     ? GameTime.UnscaledTime
                     : GameTime.Time;
-                
                 _timerAspect.Active.GetOrAddComponent(entity);
                 _timerAspect.Completed.TryRemove(entity);
                 

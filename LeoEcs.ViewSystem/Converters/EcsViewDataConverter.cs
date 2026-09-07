@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Converters
+namespace UniGame.LeoEcs.ViewSystem.Converters
 {
     using System;
     using Components;
@@ -9,8 +9,8 @@
     using Sirenix.OdinInspector;
     using UiSystem.Runtime;
     using UniGame.ViewSystem.Runtime;
-    using UniModules.UniCore.Runtime.DataFlow;
-    using UniRx;
+    using UniGame.Runtime.DataFlow;
+    using R3;
     using UnityEngine;
     using ViewSkinTagComponent = ViewSkinTagComponent;
 
@@ -32,7 +32,7 @@
         private EcsPackedEntity _viewPackedEntity;
         private IUiView<TData> _view;
         private ViewSkinTagComponent _viewSkinTag;
-        private LifeTimeDefinition _entityLifeTime;
+        private LifeTime _entityLifeTime;
 
         #endregion
         
@@ -48,8 +48,8 @@
         protected override void OnApply(GameObject target, EcsWorld world, int targetEntity)
         {
             //reset lifetime
-            _entityLifeTime ??= new LifeTimeDefinition();
-            _entityLifeTime.Release();
+            _entityLifeTime ??= new LifeTime();
+            _entityLifeTime.Restart();
             
             _viewSkinTag = target.GetComponent<ViewSkinTagComponent>();
             _view = target.GetComponent<IUiView<TData>>();
@@ -64,7 +64,7 @@
             ref var viewComponent = ref world.GetOrAddComponent<ViewComponent>(entity);
             ref var viewStatusComponent = ref world.GetOrAddComponent<ViewStatusComponent>(entity);
 
-            viewStatusComponent.Status = _view.Status.Value;
+            viewStatusComponent.Status = _view.Status.CurrentValue;
             viewComponent.View = _view;
             viewComponent.Type = _view.GetType();
 
@@ -118,7 +118,7 @@
         {
             entity = -1;
             
-            _entityLifeTime?.Release();
+            _entityLifeTime?.Terminate();
             _world = null;
             _viewPackedEntity = default;
         }

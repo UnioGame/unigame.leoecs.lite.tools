@@ -1,13 +1,14 @@
-﻿namespace Game.Ecs.UI.EndGameScreens.Systems
+namespace Game.Ecs.UI.EndGameScreens.Systems
 {
     using System;
     using Leopotam.EcsLite;
     using UniGame.LeoEcs.Shared.Extensions;
     using UniGame.LeoEcs.ViewSystem.Components;
     using UniGame.ViewSystem.Runtime;
-    using UniModules.UniCore.Runtime.Utils;
-    using UniModules.UniGame.UISystem.Runtime.WindowStackControllers.Abstract;
-    using ViewType = UniModules.UniGame.UiSystem.Runtime.ViewType;
+    using UniGame.Runtime.Utils;
+    using UniGame.ViewSystem.Runtime.WindowStackControllers.Abstract;
+    using Unity.IL2CPP.CompilerServices;
+    using ViewType = global::UniModules.UniGame.UiSystem.Runtime.ViewType;
     
     /// <summary>
     /// await target event and create view

@@ -49,6 +49,9 @@
 #endif
         [Space(8)]
         [SerializeReference]
+#if ODIN_INSPECTOR
+        [ListDrawerSettings(ListElementLabelName = "@Name",DefaultExpandedState = false)]
+#endif
         public List<IEcsComponentConverter> converters = new List<IEcsComponentConverter>();
 
         private int _parentEntity = -1;

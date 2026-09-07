@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Leopotam.EcsLite;
 using UniGame.UiSystem.Runtime;
 using UniGame.ViewSystem.Runtime;
@@ -8,11 +8,9 @@ using UnityEngine;
 namespace UniGame.LeoEcs.ViewSystem.Converters
 {
     [Serializable]
-    public class EcsViewModel : ViewModelBase
+    public class EcsViewModel : ViewModel
     {
         public static IViewModel Model = new EcsViewModel();
-        
-        public override bool IsDisposeWithModel => false;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         public static void OnReset()

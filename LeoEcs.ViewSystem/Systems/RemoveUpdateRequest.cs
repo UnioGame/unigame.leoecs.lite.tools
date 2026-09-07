@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Leopotam.EcsLite;
 using UniGame.LeoEcs.ViewSystem.Components;
 using UniGame.ViewSystem.Runtime;

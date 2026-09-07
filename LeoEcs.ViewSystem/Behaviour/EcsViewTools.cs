@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Behavriour
+namespace UniGame.LeoEcs.ViewSystem.Behavriour
 {
     using System;
     using Components;
@@ -37,7 +37,7 @@
             AddViewModelData(world,ref packedEntity, model);
             
             await _viewSystem
-                .InitializeView(view, model)
+                .InitializeView(view, model, null)
                 .AttachExternalCancellation(_lifeTime.Token);
         }
 

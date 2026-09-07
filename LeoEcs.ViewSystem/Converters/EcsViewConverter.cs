@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Converters
+namespace UniGame.LeoEcs.ViewSystem.Converters
 {
     using Components;
     using Converter.Runtime;
@@ -7,7 +7,7 @@
     using Shared.Extensions;
     using Sirenix.OdinInspector;
     using UniGame.ViewSystem.Runtime;
-    using UniModules.UniGame.UISystem.Runtime;
+    using UniGame.UiSystem.Runtime;
     using UnityEngine;
 
     [RequireComponent(typeof(LeoEcsMonoConverter))]
