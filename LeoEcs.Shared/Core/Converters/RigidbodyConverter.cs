@@ -1,9 +1,8 @@
-﻿namespace Game.Ecs.GameAi.MoveToTarget.Converters
+namespace Game.Ecs.GameAi.MoveToTarget.Converters
 {
 	using System;
 	using System.Threading;
 	using Leopotam.EcsLite;
-	using UniCore.Runtime.ProfilerTools;
 	using UniGame.LeoEcs.Converter.Runtime;
 	using UniGame.LeoEcs.Shared.Components;
 	using UniGame.LeoEcs.Shared.Extensions;
@@ -28,7 +27,7 @@
 #if UNITY_EDITOR
 			if (!rigidbody)
 			{
-				GameLog.Log($"{nameof(RigidbodyConverter)} WRONG TARGET",Color.red);
+				Debug.LogError($"{nameof(RigidbodyConverter)} WRONG TARGET");
 				return;
 			}
 #endif

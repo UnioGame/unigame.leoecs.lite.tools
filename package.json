@@ -19,7 +19,7 @@
     "com.unigame.rx": "2025.0.5",
     "com.cysharp.unitask": "2.5.11",
     "com.unigame.viewsystem": "2023.0.4",
-    "com.leopotam.ecslite.di": "https://github.com/UnioGame/ecslite-di.git#99347c110c316a54c1cf2f0b268950f02612662d",
+    "com.leopotam.ecslite.di": "2024.5.22",
     "com.leopotam.ecslite": "https://github.com/UnioGame/ecslite.git#5053141d7d663c6b1855c8409ac93dfac807b239",
     "com.leopotam.ecslite.extendedsystems": "https://github.com/UnioGame/ecslite-extendedsystems.git#007a5af4aaa1c4993523232f306a5f02e1de7c0f",
     "com.leopotam.ecslite.threads": "https://github.com/UnioGame/ecslite-threads.git#46e34e0c3459410f305b1c0eacd4f301c528c438",

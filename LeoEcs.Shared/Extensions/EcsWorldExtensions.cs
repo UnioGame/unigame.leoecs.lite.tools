@@ -24,12 +24,13 @@ namespace UniGame.LeoEcs.Shared.Extensions
             .Memorize<EcsWorld, WorldContextData>(static x =>
             {
                 var lifeTime = new LifeTime();
+                var singleEntities = new NativeHashMap<int, EcsPackedEntity>(8, Allocator.Persistent);
+                lifeTime.AddCleanUpAction(singleEntities.Dispose);
                 var worldData = new WorldContextData
                 {
                     World = x,
                     LifeTime = lifeTime,
-                    SingleEntities = new NativeHashMap<int, EcsPackedEntity>(8, Allocator.Persistent)
-                        .AddTo(lifeTime)
+                    SingleEntities = singleEntities
                 };
 
                 UpdateWorldLifeTime(x,lifeTime).Forget();
