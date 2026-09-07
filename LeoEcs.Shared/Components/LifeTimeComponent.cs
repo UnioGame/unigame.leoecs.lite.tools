@@ -2,7 +2,7 @@
 {
     using System;
     using Leopotam.EcsLite;
-    using UniModules.UniCore.Runtime.DataFlow;
+    using UniGame.Runtime.DataFlow;
 
     /// <summary>
     /// lifetime component

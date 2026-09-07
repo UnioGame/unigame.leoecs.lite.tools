@@ -4,7 +4,7 @@
     using System.Runtime.CompilerServices;
     using Leopotam.EcsLite;
     using UniGame.LeoEcs.Bootstrap.Runtime.Attributes;
-    using UniModules.UniCore.Runtime.ReflectionUtils;
+    using UniGame.Runtime.ReflectionUtils;
     using Unity.Profiling;
     using UnityEngine.Profiling;
     /// <summary>

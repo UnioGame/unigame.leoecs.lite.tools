@@ -5,19 +5,19 @@
     using UnityEngine;
     using Leopotam.EcsLite;
     using Shared.Extensions;
-    using UniModules.UniCore.Runtime.DataFlow;
+    using UniGame.Runtime.DataFlow;
 
     public static class LeoEcsGlobalData
     {
         public static EcsWorld World;
-        public static LifeTimeDefinition LifeTime;
+        public static LifeTime LifeTime;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         public static void Reset()
         {
             World = null;
             LifeTime?.Terminate();
-            LifeTime = new LifeTimeDefinition();
+            LifeTime = new LifeTime();
         }
 
         public static async UniTask<EcsWorld> WaitAliveWorld()

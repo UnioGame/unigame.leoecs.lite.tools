@@ -2,7 +2,7 @@
 {
     using Leopotam.EcsLite;
     using UniGame.Core.Runtime;
-    using UniModules.UniCore.Runtime.DataFlow;
+    using UniGame.Runtime.DataFlow;
     using Unity.Jobs;
 
     public abstract class EcsDataJobSystem<TJob> : IEcsJobDataParallelFor<TJob>,IEcsDestroySystem
@@ -11,7 +11,7 @@
         public IEcsSystems ecsSystems;
         public EcsWorld world;
         
-        private LifeTimeDefinition _lifeTime;
+        private LifeTime _lifeTime;
         
         private int _defaultJobsCount;
         private JobHandle _jobHandle;
@@ -22,7 +22,7 @@
             ecsSystems = systems;
             world = systems.GetWorld();
             
-            _lifeTime = new LifeTimeDefinition();
+            _lifeTime = new LifeTime();
             _defaultJobsCount = 16;
             _jobHandle = default;
             _job = default;
