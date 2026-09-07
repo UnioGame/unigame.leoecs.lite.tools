@@ -45,7 +45,7 @@
             if (!pool.Has(entity)) 
                 return false;
             
-            component = ref pool.Get(entity);
+            component = pool.Get(entity);
             return true;
         }
         
