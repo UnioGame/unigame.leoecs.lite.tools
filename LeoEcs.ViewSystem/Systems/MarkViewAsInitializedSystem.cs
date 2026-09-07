@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Systems
+namespace UniGame.LeoEcs.ViewSystem.Systems
 {
     using System;
     using Bootstrap.Runtime.Attributes;

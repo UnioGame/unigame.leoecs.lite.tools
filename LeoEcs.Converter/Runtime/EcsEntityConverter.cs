@@ -1,10 +1,10 @@
-﻿namespace UniGame.LeoEcs.Converter.Runtime
+namespace UniGame.LeoEcs.Converter.Runtime
 {
     using System;
     using System.Collections.Generic;
     using Abstract;
     using Core.Runtime;
-    using Core.Runtime.ScriptableObjects;
+    using UniGame.Runtime.DataFlow;
     using Cysharp.Threading.Tasks;
     using Leopotam.EcsLite;
     using Shared.Extensions;
@@ -13,8 +13,12 @@
 
     [Serializable]
     [CreateAssetMenu(menuName = "UniGame/LeoEcs/Converter/Entity Converter",fileName = "Entity Converter")]
-    public class EcsEntityConverter : LifetimeScriptableObject
+    public class EcsEntityConverter : ScriptableObject
     {
+        private readonly LifeTime _lifeTime = new();
+
+        public ILifeTime LifeTime => _lifeTime;
+
         #region inspector
         
         [Tooltip("if true, when create entities for each converter")]
@@ -55,7 +59,7 @@
             if (!converter.IsEnabled)
                 return UniTask.CompletedTask;
             
-            converter.Apply(world,entity,LifeTime.Token);
+            converter.Apply(world,entity,_lifeTime.Token);
             
             return UniTask.CompletedTask;
         }

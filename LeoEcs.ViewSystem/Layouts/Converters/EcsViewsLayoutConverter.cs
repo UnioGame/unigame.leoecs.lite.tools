@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Layouts.Converters
+namespace UniGame.LeoEcs.ViewSystem.Layouts.Converters
 {
     using System;
     using System.Threading;
@@ -9,7 +9,7 @@
     using Shared.Extensions;
     using Sirenix.OdinInspector;
     using UniGame.LeoEcs.Converter.Runtime;
-    using UniModules.UniGame.Core.Runtime.DataFlow.Extensions;
+    using UniGame.Core.Runtime;
     using Unity.IL2CPP.CompilerServices;
     using UnityEngine;
 

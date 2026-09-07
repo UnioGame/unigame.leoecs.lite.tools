@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Behavriour
+namespace UniGame.LeoEcs.ViewSystem.Behavriour
 {
     using Core.Runtime;
     using Cysharp.Threading.Tasks;

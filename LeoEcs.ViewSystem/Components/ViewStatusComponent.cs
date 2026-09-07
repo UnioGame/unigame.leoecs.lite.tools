@@ -1,5 +1,5 @@
 using System;
-using UniModules.UniGame.UISystem.Runtime;
+using UniGame.ViewSystem.Runtime;
 using UnityEngine;
 
 namespace UniGame.LeoEcs.ViewSystem.Components

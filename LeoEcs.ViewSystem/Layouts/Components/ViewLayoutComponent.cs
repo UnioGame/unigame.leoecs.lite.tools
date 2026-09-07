@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Layouts.Components
+namespace UniGame.LeoEcs.ViewSystem.Layouts.Components
 {
     using System;
     using UniGame.ViewSystem.Runtime;

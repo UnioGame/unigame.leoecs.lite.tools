@@ -1,4 +1,4 @@
-﻿namespace Game.Ecs.UI.EndGameScreens.Systems
+namespace Game.Ecs.UI.EndGameScreens.Systems
 {
     using System;
     using Leopotam.EcsLite;

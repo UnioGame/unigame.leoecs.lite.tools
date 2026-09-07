@@ -40,7 +40,7 @@ namespace UniGame.LeoEcs.ViewSystem.Systems
 
                 var activeStatus = viewStatusComponent.Status;
                 var view = viewComponent.View;
-                viewStatusComponent.Status = view.Status.Value;
+                viewStatusComponent.Status = view.Status.CurrentValue;
 
                 if (activeStatus != viewStatusComponent.Status)
                     _viewAspect.StatusChanged.Add(entity);

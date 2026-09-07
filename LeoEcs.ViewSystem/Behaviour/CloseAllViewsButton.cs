@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Behavriour
+namespace UniGame.LeoEcs.ViewSystem.Behavriour
 {
     using System.Threading;
     using Components;
@@ -6,10 +6,10 @@
     using Converter.Runtime.Abstract;
     using Core.Runtime;
     using Leopotam.EcsLite;
-    using Rx.Runtime.Extensions;
+    using UniGame.Runtime.Rx.Runtime.Extensions;
     using Shared.Extensions;
     using Sirenix.OdinInspector;
-    using UniModules.UniGame.Core.Runtime.DataFlow.Extensions;
+    using UniGame.Core.Runtime;
     using UnityEngine;
     using UnityEngine.UI;
 

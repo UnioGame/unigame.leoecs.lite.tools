@@ -1,6 +1,6 @@
 namespace UniGame.LeoEcs.Bootstrap.Runtime.Abstract
 {
-    using UniGame.GameFlow.Runtime.Interfaces;
+    using UniGame.GameFlow.Runtime;
     using System;
     using Converter.Runtime;
     using Leopotam.EcsLite;

@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Layouts.Systems
+namespace UniGame.LeoEcs.ViewSystem.Layouts.Systems
 {
     using System;
     using System.Linq;

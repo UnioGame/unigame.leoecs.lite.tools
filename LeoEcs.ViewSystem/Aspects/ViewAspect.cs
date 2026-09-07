@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Aspects
+namespace UniGame.LeoEcs.ViewSystem.Aspects
 {
     using System;
     using Components;

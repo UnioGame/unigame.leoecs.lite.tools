@@ -5,8 +5,8 @@ namespace UniGame.LeoEcs.Shared.Extensions
     using Core.Runtime;
     using Cysharp.Threading.Tasks;
     using Leopotam.EcsLite;
-    using UniModules.UniCore.Runtime.DataFlow;
-    using UniModules.UniCore.Runtime.Utils;
+    using UniGame.Runtime.DataFlow;
+    using UniGame.Runtime.Utils;
     using Unity.IL2CPP.CompilerServices;
     using UnityEngine;
 
@@ -17,14 +17,14 @@ namespace UniGame.LeoEcs.Shared.Extensions
 #endif
     public static class EcsWorldExtensions
     {
-        private static MemorizeItem<EcsWorld,LifeTimeDefinition> _memorizeItem = MemorizeTool
-            .Memorize<EcsWorld, LifeTimeDefinition>(static x =>
+        private static MemorizeItem<EcsWorld,LifeTime> _memorizeItem = MemorizeTool
+            .Memorize<EcsWorld, LifeTime>(static x =>
             {
-                var lifeTime = new LifeTimeDefinition();
+                var lifeTime = new LifeTime();
                 UpdateWorldLifeTime(x,lifeTime).Forget();
                 return lifeTime;
                 
-                static async UniTask UpdateWorldLifeTime(EcsWorld world,LifeTimeDefinition lifeTime)
+                static async UniTask UpdateWorldLifeTime(EcsWorld world,LifeTime lifeTime)
                 {
                     while (world.IsAlive())
                     {

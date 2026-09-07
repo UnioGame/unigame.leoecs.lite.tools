@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.Debug.Editor
+namespace UniGame.LeoEcs.Debug.Editor
 {
     using System;
     using System.Buffers;
@@ -9,7 +9,7 @@
     using Runtime.ObjectPool.Extensions;
     using Sirenix.OdinInspector;
     using UniModules.Editor;
-    using UniModules.UniCore.Runtime.ReflectionUtils;
+    using UniGame.Runtime.ReflectionUtils;
     using UniModules.UniGame.Editor.DrawersTools;
     using UnityEngine;
 

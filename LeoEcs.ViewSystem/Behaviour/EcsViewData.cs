@@ -1,8 +1,9 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Components
+namespace UniGame.LeoEcs.ViewSystem.Components
 {
+    using global::UniModules.UniGame.UiSystem.Runtime;
     using System;
     using Leopotam.EcsLite;
-    using UniModules.UniGame.UiSystem.Runtime;
+    using UniGame.UiSystem.Runtime;
     using UnityEngine;
 
     [Serializable]

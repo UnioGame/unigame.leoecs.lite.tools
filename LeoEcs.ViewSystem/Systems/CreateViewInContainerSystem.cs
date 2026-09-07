@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Systems
+namespace UniGame.LeoEcs.ViewSystem.Systems
 {
     using System;
     using Components;
@@ -6,7 +6,7 @@
     using Leopotam.EcsLite;
     using Shared.Components;
     using Shared.Extensions;
-    using UniModules.UniGame.UiSystem.Runtime;
+    using UniGame.UiSystem.Runtime;
 
     /// <summary>
     /// listen request to create view in container and find container by id

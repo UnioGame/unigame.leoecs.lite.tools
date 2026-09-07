@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Converters
+namespace UniGame.LeoEcs.ViewSystem.Converters
 {
     using System.Threading;
     using Converter.Runtime;

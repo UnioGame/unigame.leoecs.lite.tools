@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.Bootstrap.Runtime
+namespace UniGame.LeoEcs.Bootstrap.Runtime
 {
     using System;
     using System.Linq;
@@ -9,7 +9,7 @@
     using Cysharp.Threading.Tasks;
     using Leopotam.EcsLite;
     using Sirenix.OdinInspector;
-    using UniModules.UniGameFlow.GameFlow.Runtime.Services;
+    using UniGame.Context.Runtime;
     using UnityEngine;
 
     [Serializable]
@@ -80,7 +80,6 @@
             var assetName = name;
             
 #if UNITY_EDITOR
-            LifeTime.LogOnRelease($"SERVICE: LeoEcs Service COMPLETE : {assetName}",Color.yellow);
 #endif
             context.LifeTime.AddDispose(ecsService);
             return ecsService;

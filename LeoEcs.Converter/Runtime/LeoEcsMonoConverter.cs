@@ -9,7 +9,7 @@
     using Editor;
     using Leopotam.EcsLite;
     using Sirenix.OdinInspector;
-    using UniModules.UniCore.Runtime.DataFlow;
+    using UniGame.Runtime.DataFlow;
     using UnityEngine;
     using UnityEngine.Serialization;
 
@@ -66,7 +66,7 @@
         private EcsPackedEntity _packedEntity;
         private EcsWorld _world;
         private List<ILeoEcsComponentConverter> _converters = new List<ILeoEcsComponentConverter>();
-        private LifeTimeDefinition _entityLifeTime = new LifeTimeDefinition();
+        private LifeTime _entityLifeTime = new LifeTime();
         private int _generation;
         
 #endregion
@@ -161,7 +161,7 @@
             if (_state != EntityState.Destroyed) return;
 
             _state = EntityState.Creating;
-            _entityLifeTime.Release();
+            _entityLifeTime.Restart();
 
             Convert().AttachExternalCancellation(_entityLifeTime.Token)
                 .Forget();
@@ -207,7 +207,7 @@
             entity = -1;
             _state = EntityState.Destroyed;
             _packedEntity = default;
-            _entityLifeTime.Release();
+            _entityLifeTime.Terminate();
         }
 
 #endregion
@@ -243,7 +243,7 @@
 
         private void Awake()
         {
-            _entityLifeTime ??= new LifeTimeDefinition();
+            _entityLifeTime ??= new LifeTime();
             //get all converters
             _converters ??= new List<ILeoEcsComponentConverter>();
         }

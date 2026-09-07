@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Converters
+namespace UniGame.LeoEcs.ViewSystem.Converters
 {
     using System;
     using System.Threading;
@@ -11,8 +11,8 @@
     using Sirenix.OdinInspector;
     using UiSystem.Runtime;
     using UniGame.ViewSystem.Runtime;
-    using UniModules.UniCore.Runtime.DataFlow;
-    using UniRx;
+    using UniGame.Runtime.DataFlow;
+    using R3;
     using UnityEngine;
 
     [Serializable]
@@ -32,7 +32,7 @@
         private EcsWorld _world;
         private EcsPackedEntity _viewPackedEntity;
         private IUiView<TData> _view;
-        private LifeTimeDefinition _entityLifeTime;
+        private LifeTime _entityLifeTime;
 
         #endregion
         
@@ -48,8 +48,8 @@
         public void Apply(GameObject target, EcsWorld world, int targetEntity, CancellationToken cancellationToken = default)
         {
             //reset lifetime
-            _entityLifeTime ??= new LifeTimeDefinition();
-            _entityLifeTime.Release();
+            _entityLifeTime ??= new LifeTime();
+            _entityLifeTime.Restart();
             
             _view = target.GetComponent<IUiView<TData>>();
             if (_view == null) return;
@@ -63,7 +63,7 @@
             ref var viewComponent = ref world.GetOrAddComponent<ViewComponent>(entity);
             ref var viewStatusComponent = ref world.GetOrAddComponent<ViewStatusComponent>(entity);
 
-            viewStatusComponent.Status = _view.Status.Value;
+            viewStatusComponent.Status = _view.Status.CurrentValue;
             viewComponent.View = _view;
             viewComponent.Type = _view.GetType();
 
@@ -110,7 +110,7 @@
         {
             entity = -1;
             
-            _entityLifeTime?.Release();
+            _entityLifeTime?.Terminate();
             _world = null;
             _viewPackedEntity = default;
         }

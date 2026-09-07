@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Components
+namespace UniGame.LeoEcs.ViewSystem.Components
 {
     using System;
     using Unity.IL2CPP.CompilerServices;

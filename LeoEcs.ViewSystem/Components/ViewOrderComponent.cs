@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.Converter.Runtime.Components
+namespace UniGame.LeoEcs.Converter.Runtime.Components
 {
     using System;
 

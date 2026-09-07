@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.Debug.Editor
+namespace UniGame.LeoEcs.Debug.Editor
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +7,7 @@
     using Leopotam.EcsLite;
     using Runtime.ObjectPool.Extensions;
     using Sirenix.OdinInspector;
-    using UniModules.UniCore.Runtime.Utils;
+    using UniGame.Runtime.Utils;
     using UnityEngine;
 
     [Serializable]

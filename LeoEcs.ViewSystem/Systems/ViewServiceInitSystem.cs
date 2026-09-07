@@ -2,7 +2,7 @@ namespace UniGame.LeoEcs.ViewSystem.Systems
 {
     using System;
     using Components;
-    using Context.Runtime.Extension;
+    using UniGame.Context.Runtime;
     using Core.Runtime;
     using Cysharp.Threading.Tasks;
     using Leopotam.EcsLite;

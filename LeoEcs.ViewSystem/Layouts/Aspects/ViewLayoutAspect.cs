@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Layouts.Aspects
+namespace UniGame.LeoEcs.ViewSystem.Layouts.Aspects
 {
     using Components;
     using Game.Modules.UnioModules.UniGame.LeoEcsLite.LeoEcs.ViewSystem.Components;

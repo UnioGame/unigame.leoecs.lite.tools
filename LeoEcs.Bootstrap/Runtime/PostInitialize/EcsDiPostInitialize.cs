@@ -1,11 +1,11 @@
-﻿namespace UniGame.LeoEcs.Bootstrap.Runtime.PostInitialize
+namespace UniGame.LeoEcs.Bootstrap.Runtime.PostInitialize
 {
     using System;
     using System.Collections.Generic;
     using Abstract;
     using Attributes;
     using Leopotam.EcsLite;
-    using UniModules.UniCore.Runtime.ReflectionUtils;
+    using UniGame.Runtime.ReflectionUtils;
 
     [Serializable]
     public class EcsDiPostInitialize : IEcsPostInitializeAction

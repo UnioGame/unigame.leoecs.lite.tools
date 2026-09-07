@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Behavriour
+namespace UniGame.LeoEcs.ViewSystem.Behavriour
 {
     using System;
     using Core.Runtime;
@@ -7,7 +7,7 @@
     using UiSystem.Runtime;
 
     [Serializable]
-    public class EcsViewModel : ViewModelBase, IEcsViewModel
+    public class EcsViewModel : ViewModel, IEcsViewModel
     {
 
         public virtual async UniTask InitializeAsync(EcsWorld world, IContext context)

@@ -4,7 +4,7 @@ namespace UniGame.LeoEcs.ViewSystem
     using Cysharp.Threading.Tasks;
     using Leopotam.EcsLite;
     using Leopotam.EcsLite.ExtendedSystems;
-    using UniGame.Context.Runtime.Extension;
+    using UniGame.Context.Runtime;
     using UniGame.Core.Runtime;
     using Components;
     using Game.Modules.UnioModules.UniGame.LeoEcsLite.LeoEcs.ViewSystem.Components.Events;

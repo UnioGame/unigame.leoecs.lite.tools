@@ -1,4 +1,4 @@
-﻿using Leopotam.EcsLite;
+using Leopotam.EcsLite;
 using UniGame.Core.Runtime;
 using UniGame.LeoEcs.Converter.Runtime.Abstract;
 using UniGame.ViewSystem.Runtime;

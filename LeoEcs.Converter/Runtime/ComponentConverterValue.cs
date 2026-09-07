@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.Converter.Runtime
+namespace UniGame.LeoEcs.Converter.Runtime
 {
     using System;
     using System.Threading;
@@ -6,7 +6,7 @@
     using Core.Runtime.Extension;
     using Leopotam.EcsLite;
     using Sirenix.OdinInspector;
-    using UniModules.UniCore.Runtime.ReflectionUtils;
+    using UniGame.Runtime.ReflectionUtils;
     using UnityEngine;
 
     [Serializable]

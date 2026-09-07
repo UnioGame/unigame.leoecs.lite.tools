@@ -1,4 +1,4 @@
-﻿namespace UniGame.LeoEcs.ViewSystem.Behavriour
+namespace UniGame.LeoEcs.ViewSystem.Behavriour
 {
     using System;
     using Core.Runtime;
