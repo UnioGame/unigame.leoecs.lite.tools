@@ -41,7 +41,7 @@
         public string Name => converter == null ? "EMPTY" : converter.Name;
         public void Apply(EcsWorld world, int entity)
         {
-            throw new System.NotImplementedException();
+            converter.Apply(world, entity);
         }
 
         #endregion
